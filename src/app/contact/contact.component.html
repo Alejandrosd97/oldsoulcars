@@ -1,0 +1,35 @@
+<div class="contenedor">
+  <div class="info">
+    <form [formGroup]="contactForm" (ngSubmit)="enviar()">
+      <div class="mi-row">
+        <label for="name">NAME</label>
+        <input type="text" formControlName="name" required />
+        @if (hasErrors('name', 'required')) {
+          <div class="text-danger sin-margen">name can't be empty</div>
+        }
+      </div>
+      <div class="mi-row">
+        <label for="email">EMAIL</label>
+        <input type="email" formControlName="email" required />
+        @if (hasErrors('email', 'email') || hasErrors('email', 'required') ) {
+          <div class="text-danger sin-margen">Invalid email</div>
+        }
+        @if (hasErrors('email', 'required')) {
+          <div class="text-danger sin-margen">Email can't be empty</div>
+        }
+      </div>
+      <div class="mi-row">
+        <label for="message">MESSAGE</label>
+        <textarea required formControlName="message" name="message" id="" cols="30" rows="10"></textarea>
+        @if (hasErrors('message', 'required')) {
+          <div class="text-danger sin-margen">Message can't be empty</div>
+        }
+      </div>
+      <button class="boton" type="submit">SEND</button>
+
+    </form>
+  </div> 
+  <div class="img-box">
+    <img src="../../assets/car4.jpg" alt="" />
+  </div>
+</div>

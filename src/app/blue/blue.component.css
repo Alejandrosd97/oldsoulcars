@@ -1,0 +1,69 @@
+.blue {
+    background-color: #84a59d;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    color: white;
+    width: 90%;
+    max-width: 990px;
+    margin: auto;
+}
+
+.info h3 {
+    font-size: 42px;
+    letter-spacing: 2px;
+    color: #ffba4b;
+    font-weight: bold;
+    margin: 0 0 40px 0
+}
+
+.info h4 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin: 0
+}
+
+.info p {
+    font-size: 18px;
+    font-family: 'Imprima';
+    line-height: 1.15em;
+}
+
+.servicios {
+    display: flex;
+    gap: 20px;
+}
+
+.servicio {
+    border: 2px solid #ffba4b;
+    border-radius: 2px;
+    padding: 16px;
+    width: 330px;
+    display: grid;
+
+}
+
+.check-btn {
+    align-self: end;
+    justify-self: start
+}
+
+@media screen and (max-width:700px) {
+    .servicios {
+        flex-direction: column;
+    }
+
+    .servicio {
+        width: 100%
+    }
+
+    .blue {
+        padding: 100px 0px;
+    }
+
+}

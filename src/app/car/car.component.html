@@ -1,0 +1,10 @@
+<div class="mi-card">
+  <div class="img-box">
+    <img src="{{ car.image }}" alt="" />
+  </div>
+  <div class="info">
+    <h3>{{ car.year }}</h3>
+    <h2>{{ car.brand }} {{ car.model }}</h2>
+      <button [routerLink]="['/car' , car.id ]"><span>DETAILS</span></button>
+  </div>
+</div>

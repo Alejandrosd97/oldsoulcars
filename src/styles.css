@@ -1,1 +1,102 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@400;600&family=Wire+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Palanquin:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Wire One' !important;
+
+    --midnight-green: #074f57ff;
+    --linen: #f7ede2ff;
+    --tea-rose-red: #f5cac3ff;
+    --cambridge-blue: #84a59dff;
+    --light-coral: #f28482ff;
+
+
+    --midnight-green: hsla(186, 85%, 18%, 1);
+    --linen: hsla(31, 57%, 93%, 1);
+    --tea-rose-red: hsla(8, 71%, 86%, 1);
+    --cambridge-blue: hsla(165, 15%, 58%, 1);
+    --light-coral: hsla(1, 81%, 73%, 1);
+}
+
+ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none !important
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-family: 'Imprima';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1em;
+    opacity: 1;
+    border-radius: 1px;
+    color: #eadbcb;
+    background-color: transparent;
+    padding: 20px 32px;
+    position: relative;
+    text-align: center;
+    text-rendering: geometricprecision;
+    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1), background-color 100ms cubic-bezier(.694, 0, 0.335, 1), color 100ms cubic-bezier(.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:before {
+    animation: opacityFallbackOut .5s step-end forwards;
+    /* background-color: #eadbcb; */
+    background-color: #ffba4b;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+
+    left: 0;
+    position: absolute;
+    top: 0;
+    border-radius: 1px;
+    transform: translateZ(0);
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+    width: 100%;
+}
+
+
+
+button:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+/* button:after {
+    background-color: #FFFFFF;
+} */
+
+button span {
+    z-index: 1;
+    position: relative;
+}
+
+p {
+    font-family: 'Imprima';
+    line-height: 1.15em;
+}
+
+span {
+    font-family: 'Wire One'
+}

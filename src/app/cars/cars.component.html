@@ -1,0 +1,13 @@
+<div class="contenedor">
+  <h2>DISCOVER OUR CAR FLEET</h2>
+  <div class="cars-container">
+
+    @for (car of cars; track car.id){
+    
+    <app-car class="peque"
+      
+      [car]="car"
+    />
+    }
+  </div>
+</div>
